@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 2 CDN Example with vue-tel-input</title>
+
+    <!-- Add the necessary styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-phone-number-input@1.12.13/dist/vue-phone-number-input.min.css">
+</head>
+<body>
+
+<div id="app">
+    <vue-tel-input v-model="phoneNumber"></vue-tel-input>
+    <p>Selected phone number: {{ phoneNumber }}</p>
+</div>
+
+<!-- Vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+<!-- vue-tel-input -->
+<script src="https://cdn.jsdelivr.net/npm/vue-tel-input@2.5.2"></script>
+
+<!-- Your custom script -->
+<script>
+    // Vue instance
+    new Vue({
+        el: '#app',
+        data: {
+            phoneNumber: ''
+        },
+        components: {
+            'vue-tel-input': window['vue-tel-input']
+        }
+    });
+</script>
+
+</body>
+</html>
